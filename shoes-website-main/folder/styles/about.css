@@ -1,0 +1,118 @@
+section{
+    padding: 2rem 7%;
+}
+.about-nav-menu-left{
+    padding: 0 1rem;
+}
+.about-nav-menu-left a{
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: rgb(35, 35, 35);
+    font-weight: 500;
+}
+.about-nav-menu-left a:hover{
+    color: grey;
+}
+.animate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60rem;
+    background-color: black;
+}
+.animated-text {
+    font-size: 36px;
+    color: aliceblue;
+    text-align: center;
+    
+}
+.about .container{
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+.about .container .about-left{
+    flex: 1 1 45rem;
+}
+.about .container .about-left img{
+    width: 100%;
+    height: 100%;
+}
+.about .container .about-right{
+    flex: 1 1 45rem;
+}
+.about .container .about-right h3{
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.about .container .about-right p{
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: rgb(102, 102, 101);
+}
+.review h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 2rem 0;
+    font-weight: bold;
+}
+.review .wrapper .review-card{
+    border: 0.1rem solid rgb(210, 208, 208);
+    background-color: rgb(171, 193, 212);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.review .wrapper .review-card img{
+    height: 4rem;
+}
+.review .wrapper .review-card .customer{
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.review .wrapper .review-card:hover .customer{
+    transform: scale(1.1);
+}
+.review .wrapper .review-card p{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: grey;
+    padding: 2rem 0;
+}
+.review .wrapper .review-card:hover p{
+    color: black;
+}
+.review .wrapper .review-card h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+.review .wrapper .review-card .stars{
+    font-size: 1.5rem;
+    color: grey;
+    padding: 0.8rem 0;
+}
+.contact{
+    background-color: rgb(244, 174, 117);
+    text-align: center;
+}
+.contact button{
+    margin: 3rem 0;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: black;
+    color: aliceblue;
+}
+.contact button:hover{
+    background-color: rgb(246, 249, 249);
+    color: black;
+}

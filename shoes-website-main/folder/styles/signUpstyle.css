@@ -1,0 +1,68 @@
+html{
+    overflow-y: hidden;
+}
+.main-signIn{
+    display: flex;
+}
+.main-signIn .main-left{
+    width: 50%;
+}
+.main-signIn .main-left img{
+    width: 100%;
+    height: 73rem;
+}
+.main-signIn .main-right{
+    background-color: rgb(173, 175, 176);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-in-form,.sign-up-form.active{
+    width: 50%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem 2rem;
+}
+.sign-in-form h3,.sign-up-form.active h3{
+    padding: 1rem 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sign-in-form input,.sign-up-form.active input{
+    text-transform: none;
+    margin-top: 1.8rem;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+}
+.sign-in-form a{
+    padding: 0.8rem 1rem;
+    color: rgb(180, 181, 182);
+    font-size: 1.3rem;
+}
+.sign-in-form a:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+.sign-in-form button,.sign-up-form.active button{
+    margin:1rem 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.sign-in-form button:hover,.sign-up-form.active button:hover{
+    background-color: rgb(9, 145, 129);
+    color: aliceblue;
+}
+.sign-in-form.disable{
+    display: none;
+}
+.sign-up-form{
+    display: none;
+}

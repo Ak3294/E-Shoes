@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.3s ease-in;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgb(208, 211, 211);
+}
+.btn{
+    border: 2px solid rgb(248, 244, 244);
+    background-color: black;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+}
+.btn:hover{
+    font-weight: bolder;
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+.header .header-menu{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.2rem;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+.header .header-menu a{
+    color: rgb(35, 35, 35);
+    font-weight: 600;
+}
+.header .header-menu a:hover{
+    color: rgb(130, 130, 130);
+}
+.header .header-drop-down{
+    position: absolute;
+    display: none;
+    top: 97%;
+    left: 75%;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    padding: 1.8rem;
+    padding-left: 1.2rem;
+    padding-right: 5rem;
+    border-radius:0.8rem;
+    background-color: white;
+    font-size: 1.5rem;
+}
+.header .header-drop-down.active{
+    display: flex;
+    z-index: 1000;
+}
+.header .header-drop-down>h4{
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.header .header-drop-down>a{
+    margin-bottom: 1rem;
+    color: rgb(130, 130, 130);
+    font-weight: 600;
+}
+.header .header-drop-down>a:hover{
+    color:black;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 5rem;
+    padding: 0 0.5rem;
+}
+.navbar .logo{
+    flex: 0 0 auto;
+}
+.navbar .logo>img{
+    height: 12rem;     
+}
+.navbar .nav-menu-left{
+    display: flex;
+    flex: 1;
+    margin-left: 5rem;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 1rem;
+}
+.navbar .nav-menu-left>a{
+    position: relative;
+    font-size: 2rem;
+    color: rgb(35, 35, 35);
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+}
+.nav-menu-left a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 3px; 
+    background-color: transparent; 
+}
+.nav-menu-left a:hover::after {
+    background-color: black;
+}
+.navbar .nav-menu-right{
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+.navbar .nav-menu-right .search-form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 18rem;
+}
+.navbar .nav-menu-right .search-form input{
+    width: 100%;/*will occupy whole width and height of its parent*/
+    height: 100%;
+    padding: 0.8rem;
+    padding-left: 4rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    background-color: rgb(224, 225, 227);
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+.navbar .nav-menu-right .search-form label{
+    position: absolute;
+    left: 1rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: black;
+    font-size: 1.5rem;
+    padding-right: 1.3rem;
+    cursor: pointer;
+}
+.navbar .nav-menu-right>a{
+    font-size:2rem;
+    color: rgb(35, 35, 35);
+}
+.navbar .nav-menu-right .fa-user{
+    display: none;
+}
+.navbar .nav-menu-right .fa-bars{
+    display: none;
+}
+.slideshow-container{
+    height: 60rem;
+    position: relative;
+    display: inline;
+    margin: auto;
+    cursor: pointer;
+}
+.slideshow-container .mySlides{
+    display: none;
+}
+.slideshow-container .mySlides>img{
+    width: 100%;
+    height: 60rem;
+}
+.slideshow-container .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width: auto;
+    padding: 1.6rem;
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.slideshow-container .next {
+    right: 0;
+}
+.best-sellers{
+    padding: 1rem 7%;
+}
+.best-sellers h3{
+    text-align: center;
+    padding: 3.5rem 0;
+    color: black;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.best-sellers span{
+    color: rgb(244, 250, 250);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.prev-btn {
+    left: 0;
+}
+.next-btn {
+    right: 0;
+}
+.wrapper{
+    flex: 1;
+    overflow-x: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.best-sellers .wrapper .best-seller-card{
+    position: relative;
+    background-color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+.best-sellers .wrapper .best-seller-card .fa-heart{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-size: 3rem;
+    color: rgb(77, 77, 77);
+}
+.best-sellers .wrapper .best-seller-card img{
+    width: 100%;
+    height: 30rem;
+}
+.best-sellers .wrapper .best-seller-card h3{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.best-sellers .wrapper .best-seller-card .price{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.categories{
+    padding: 4rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.categories img{
+    border-radius: 1rem;
+    cursor: pointer;
+    height: 70rem;
+}
+.explore h3{
+    text-align: center;
+    padding: 3.5rem 0;
+    color: black;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.explore span{
+    color: rgb(244, 250, 250);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.explore .wrapper .explore-card{
+    cursor: pointer;
+    padding: 3rem 2rem;
+}
+.explore .wrapper .explore-card h2{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1.2rem 2rem;
+    font-size: 3rem;
+}
+.explore .wrapper .explore-card p{
+    padding: 0 2rem;
+    color: rgb(121, 120, 120);
+    font-size: 1.5rem;
+}
+.shop-now{
+    display: flex;
+    position: relative;
+    padding: 2rem 7%;
+    background-color: rgb(198, 171, 148);
+    justify-content: space-between;
+    align-items: center;
+}
+.shop-now .images{
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+    overflow: visible;
+}
+.shop-now .images img{
+    height: 30rem;
+}
+.shop-now .images .img2{
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+}
+.shop-now .shop-now-content{
+    position: absolute;
+    right: 20%;
+}
+.shop-now .shop-now-content h1{
+    font-size: 4rem;
+    padding: 0.8rem 0;
+    font-weight: bold;
+}
+.shop-now .shop-now-content p{
+    font-size: 1.8rem;
+    color: rgb(197, 197, 197);
+    padding-bottom: 2rem;
+    font-weight: 500;
+}
+.shop-now .shop-now-content button{
+    background-color: black;
+    color: white;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+.shop-now .shop-now-content button:hover{
+    background-color: rgb(201, 134, 115);
+    color: black;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: aliceblue;
+}
+.footer .footer1{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 7%;
+}
+.footer1-help,.footer1-company{
+    display: flex;
+    flex-direction: column;
+}
+.footer1-help h5,.footer1-company h5{
+    padding: 2rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.footer1-help a,.footer1-company a{
+    padding: 1rem 0;
+    color: rgb(177, 177, 177);
+}

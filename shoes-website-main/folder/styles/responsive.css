@@ -1,0 +1,53 @@
+@media (max-width:1280px) {
+    html{
+        font-size: 60%;
+    }
+    .categories img{
+        height: 55rem;
+    }
+    .explore .wrapper .explore-card img{
+        height: 60rem;
+    }
+    .shop-now .shop-now-content{
+        right: 10%;
+    }
+}
+@media (max-width:1024px) {
+    .categories img{
+        height: 45rem;
+    }
+    .explore .wrapper .explore-card img{
+        height: 45rem;
+    }
+    .shop-now .shop-now-content{
+        right: 1%;
+    }
+}
+@media (max-width:992px){
+    html{
+        font-size: 55%;
+    }
+    .shop-now{
+        padding: 10rem 0;
+    }
+    .shop-now .images{
+        display: none;
+    }
+    .shop-now .shop-now-content{
+        right: 30%;
+        text-align: center;
+        overflow: visible;
+    }
+    .shop-now .shop-now-content h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width:550px){
+    html{
+        font-size: 50%;
+    }
+    .shop-now .images{
+        display: none;
+    }
+    
+}
