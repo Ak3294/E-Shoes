@@ -26,15 +26,16 @@
             <a href="signUp.html">Sign Up</a>
         </div>
         <div class="header-drop-down">
-            <h4>help</h4>
-            <a href="">Order Status</a>
-            <a href="">Dispatch and delivery</a>
-            <a href="">returns</a>
-            <a href="">contact us</a>
-            <a href="">privacy policy</a>
-            <a href="">terms of sale</a>
-            <a href="">terms of use</a>
-        </div>
+        <h4>help</h4>
+        <a href="size.html">Size Chart</a>
+        <a href="">Order Status</a>
+        <a href="">Dispatch and delivery</a>
+        <a href="">returns</a>
+        <a href="">contact us</a>
+        <a href="">privacy policy</a>
+        <a href="">terms of sale</a>
+        <a href="">terms of use</a>
+      </div>
     </header>
     <!-- top-bar -->
 
@@ -56,7 +57,6 @@
                 <input type="search" name="search" id="search-box" placeholder="search">
             </div>
             <a href="" class="fa-regular fa-user"></a>
-            <a href="" class="fa-regular fa-heart"></a>
             <a href="" class="fa-solid fa-bag-shopping"></a>
             <a href="" class="fa-solid fa-bars"></a>
         </div>
@@ -72,6 +72,15 @@
                 <img src="./Utilities/Kids/kids shoe 1.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -80,6 +89,15 @@
                 <img src="./Utilities/Kids/kid shoe 2.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -88,6 +106,15 @@
                 <img src="./Utilities/Kids/kid shoe 3.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -96,6 +123,15 @@
                 <img src="./Utilities/Kids/kid shoe 4.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -104,6 +140,15 @@
                 <img src="./Utilities/Kids/kids shoe 1.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -112,6 +157,15 @@
                 <img src="./Utilities/Kids/kid shoe 2.png">
                 
                 <h3>North plus black men's running shoes</h3>
+                 <!-- Circular buttons -->
+            <div class="circular-buttons">
+                <div class="circle" data-target="4">4</div>
+                <div class="circle" data-target="5">5</div>
+                <div class="circle" data-target="5">6</div>
+                <div class="circle" data-target="8">8</div>
+                <div class="circle" data-target="9">9</div>
+                <div class="circle" data-target="10">10</div>
+            </div>
                 <div class="price">Rs. 1079.00</div>
                 <a href="" class="btn">buy now</a>
             </div>
@@ -159,6 +213,118 @@
         </div>
     </footer>
     <!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const circles = document.querySelectorAll(".circle");
+        const arrowIcons = document.querySelectorAll(".arrow-icon");
+        const smallImages = document.querySelectorAll(".small-image");
+
+        circles.forEach((circle) => {
+          circle.addEventListener("click", function () {
+            circle.classList.toggle("active");
+          });
+        });
+
+        arrowIcons.forEach((icon) => {
+          icon.addEventListener("click", function () {
+            const target = icon.dataset.target;
+            const smallImage = document.querySelector(
+              `.small-image[data-target="${target}"]`
+            );
+            smallImage.classList.toggle("open");
+          });
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleImageDiv = document.querySelector('.toggle-image');
+        const toggleImageContent = document.querySelector('.toggle-image-content');
+        const closeToggle = document.querySelector('.close-toggle');
+    
+        // Function to toggle image visibility
+        function toggleImage() {
+            toggleImageDiv.style.display = toggleImageDiv.style.display === 'block' ? 'none' : 'block';
+        }
+    
+        // Event listener for clicking the small triangle icon
+        document.querySelector('.fa-heart').addEventListener('click', toggleImage);
+    
+        // Event listener for clicking the close icon
+        closeToggle.addEventListener('click', toggleImage);
+    });
+    
+    </script>
+    <style>
+      /* Add this CSS to style the circular buttons container */
+      .circular-buttons {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 5.7rem;
+        /* Adjust margin as needed */
+      }
+
+      /* Adjust circle styles if necessary */
+      .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .circle.active {
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* Add this CSS to style the arrow icon and small image */
+      .arrow-icon {
+        cursor: pointer;
+      }
+
+      .small-image {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .small-image img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .small-image.open {
+        display: block;
+      }
+
+      .toggle-image {
+        position: relative;
+        display: none;
+    }
+    
+    .toggle-image .toggle-image-content {
+        width: 5cm;
+        height: 5cm;
+    }
+    
+    .toggle-image .close-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    </style>
 
     <script src="script.js"></script>
 </body>

@@ -379,3 +379,71 @@ body{
     padding: 1rem 0;
     color: rgb(177, 177, 177);
 }
+
+/* Add this CSS to style the circular buttons container */
+.circular-buttons {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5.7rem;
+    /* Adjust margin as needed */
+  }
+
+  /* Adjust circle styles if necessary */
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .circle.active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Add this CSS to style the arrow icon and small image */
+  .arrow-icon {
+    cursor: pointer;
+  }
+
+  .small-image {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .small-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .small-image.open {
+    display: block;
+  }
+
+  .toggle-image {
+    position: relative;
+    display: none;
+}
+
+.toggle-image .toggle-image-content {
+    width: 5cm;
+    height: 5cm;
+}
+
+.toggle-image .close-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
