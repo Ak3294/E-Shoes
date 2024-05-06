@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="./styles/root.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/responsive.css" />
-    <link rel="stylesheet" href="./style.css" />
     <title>Soles & Style : Shoe Store</title>
   </head>
   <body>
@@ -89,20 +88,12 @@
           />
         </div>
         <a href="" class="fa-regular fa-user"></a>
-
-        <!-- HTML -->
-        <div class="cart-slider">
-          <div class="cart-content">
-            <h2>My Cart</h2>
-            <div id="cart-items"></div>
-            <div id="total-price"></div>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="fa-solid fa-bag-shopping"
-          onclick="toggleCartSlider()"
-        ></a>
+        <a href="" class="fa-solid fa-bag-shopping" id="shopping-bag"></a>
+      </div>
+      <div class="cart">
+        <div class="cart-items"></div>
+        <div class="total-price">Total: $0</div>
+        <button class="cart-btn">buy now</button>
       </div>
     </nav>
     <!-- nav-bar -->
@@ -416,7 +407,7 @@
     </footer>
     <!-- footer -->
     <script src="script.js"></script>
-
+    <script src="./cart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
