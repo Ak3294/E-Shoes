@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors'); // Import cors module
 
+
+const connectDB  = require('./db/dbConnect');
+
 // Initialize Express app
 const app = express();
 const PORT = 3000; // You can change the port number if needed
@@ -41,13 +44,17 @@ const transporter = nodemailer.createTransport({
 //-------------------------------------------
 
 
-
-
-
-
-// app.post('/SubmitOtp' , (req,res) => {
-     
-// })
+// DB Connnection
+const start = async()=>{
+    try {
+      await connectDB();
+      app.listen(PORT, () => {
+        console.log(`Database is Connected and is running on port ${PORT}`);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 // Route to handle POST requests from the frontend
 app.post('/SignUp', (req, res) => {

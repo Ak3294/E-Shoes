@@ -13,31 +13,22 @@
     <link rel="stylesheet" href="./styles/root.css">
     <link rel="stylesheet" href="./styles/men.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./cart.js"></script>
     <title>Soles & Style : Shoe Store Sneakers</title>
 </head>
 <body>
-    <!-- top-bar -->
-    <header class="header">
-        <div class="header-menu">
-            <a href="" class="help">Help</a>
-            <span>|</span>
-            <a href="Login.html">login</a>
-            <span>|</span>
-            <a href="signUp.html">Sign Up</a>
-        </div>
-        <div class="header-drop-down">
-        <h4>help</h4>
-        <a href="size.html">Size Chart</a>
-        <a href="">Order Status</a>
-        <a href="">Dispatch and delivery</a>
-        <a href="">returns</a>
-        <a href="">contact us</a>
-        <a href="">privacy policy</a>
-        <a href="">terms of sale</a>
-        <a href="">terms of use</a>
-      </div>
-    </header>
-    <!-- top-bar -->
+        <!-- Top Bar Start -->
+        <header class="header">
+            <div class="header-menu">
+                <a href="size.html" class="help">Size-Chart</a>
+                <span>|</span>
+                <a href="Login.html">Login</a>
+                <span>|</span>
+                <a href="signUp.html">Sign Up</a>
+            </div>
+        </header>
+    
+        <!-- Top Bar Ends -->
 
     <!-- nav-bar -->
     <nav class="navbar">
@@ -57,8 +48,7 @@
                 <input type="search" name="search" id="search-box" placeholder="search">
             </div>
             <a href="" class="fa-regular fa-user"></a>
-            <a href="" class="fa-solid fa-bag-shopping"></a>
-            <a href="" class="fa-solid fa-bars"></a>
+            <a href="" class="fa-solid fa-bag-shopping" id="shopping-bag"></a>
         </div>
     </nav>
     <!-- nav-bar -->
@@ -176,43 +166,42 @@
     <!-- footer -->
     <footer class="footer">
         <div class="footer1">
-            <div class="footer1-help">
-                <h5>help</h5>
-                <a href="">get help</a>
-                <a href="">order status</a>
-                <a href="">delivery</a>
-                <a href="">returns</a>
-                <a href="">payment options</a>
-                <a href="">contact us</a>
-            </div>
-            <div class="footer1-company">
-                <h5>company</h5>
-                <a href="">about us</a>
-                <a href="">news</a>
-                <a href="">career</a>
-                <a href="">investors</a>
-            </div>
-            <div class="footer1-social-media">
-                <a href="" class="fa-brands fa-instagram"></a>
-                <a href="" class="fa-brands fa-twitter"></a>
-                <a href="" class="fa-brands fa-facebook"></a>
-                <a href="" class="fa-brands fa-linkedin"></a>
-            </div>
+          <div class="footer1-help">
+            <h5>help</h5>
+            <a href="./index.html">Home</a>
+            <a href="./men.html">Men</a>
+            <a href="./women.html">Women</a>
+            <a href="./kids.html">Kids</a>
+            <a href="./sneakers.html">Sneakers</a>
+  
+          </div>
+          <div class="footer1-company">
+            <h5>company</h5>
+            <a href="./about.html">about us</a>
+            <a href="./Login.html">Login</a>
+            <a href="./signUp.html">Signup</a>
+          </div>
+          <div class="footer1-social-media">
+            <a href="https://www.instagram.com" class="fa-brands fa-instagram"></a>
+            <a href="https://twitter.com/x." class="fa-brands fa-twitter"></a>
+            <a href="https://www.facebook.com" class="fa-brands fa-facebook"></a>
+            <a href="https://www.linkedin.com" class="fa-brands fa-linkedin"></a>
+          </div>
         </div>
         <div class="footer2">
-            <div class="footer2-left">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>India</p>
-                <p>© 2024 Soles&Style, Inc.</p>
-                <p>all rights reserved</p>
-            </div>
-            <div class="footer2-right">
-                <a href="">terms of sale</a>
-                <a href="">terms of use</a>
-            </div>
+          <div class="footer2-left">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>India</p>
+            <p>© 2024 Soles&Style, Inc.</p>
+            <p>all rights reserved</p>
+          </div>
+          <div class="footer2-right">
+            <a href="">terms of sale</a>
+            <a href="">terms of use</a>
+          </div>
         </div>
-    </footer>
-    <!-- footer -->
+      </footer>
+      <!-- footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -254,6 +243,91 @@
         // Event listener for clicking the close icon
         closeToggle.addEventListener('click', toggleImage);
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const circles = document.querySelectorAll(".circle");
+        const arrowIcons = document.querySelectorAll(".arrow-icon");
+        const smallImages = document.querySelectorAll(".small-image");
+
+        circles.forEach((circle) => {
+          circle.addEventListener("click", function () {
+            circle.classList.toggle("active");
+          });
+        });
+
+        arrowIcons.forEach((icon) => {
+          icon.addEventListener("click", function () {
+            const target = icon.dataset.target;
+            const smallImage = document.querySelector(
+              `.small-image[data-target="${target}"]`
+            );
+            smallImage.classList.toggle("open");
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleImageDiv = document.querySelector(".toggle-image");
+        const toggleImageContent = document.querySelector(
+          ".toggle-image-content"
+        );
+        const closeToggle = document.querySelector(".close-toggle");
+
+        // Function to toggle image visibility
+        function toggleImage() {
+          toggleImageDiv.style.display =
+            toggleImageDiv.style.display === "block" ? "none" : "block";
+        }
+
+        // Event listener for clicking the small triangle icon
+        document
+          .querySelector(".fa-heart")
+          .addEventListener("click", toggleImage);
+
+        // Event listener for clicking the close icon
+        closeToggle.addEventListener("click", toggleImage);
+      });
+
+      /* Cart Functionalty*/
+    
+    
+
+      // JavaScript
+        // Close cart slider when close button is clicked
+        closeToggle.addEventListener("click", function () {
+          cartSlider.style.right = "-5cm";
+        });
+
+        // Handle buy now button click
+        buyNowButtons.forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            const item = this.parentNode;
+            const itemName = item.querySelector("h3").innerText;
+            const itemPrice = item.querySelector(".price").innerText;
+            const itemSize =
+              item.querySelector(".circle.selected").dataset.size;
+
+            // Create a new item element
+            const newItem = document.createElement("div");
+            newItem.innerHTML = `${itemName} - Size: ${itemSize}, Price: ${itemPrice}`;
+
+            // Add the new item to the cart
+            cartItemsContainer.appendChild(newItem);
+
+            // Calculate and update total price
+            let totalPrice = parseFloat(
+              totalPriceContainer.innerText.replace("Total: Rs. ", "")
+            );
+            totalPrice += parseFloat(itemPrice.replace("Rs. ", ""));
+            totalPriceContainer.innerText = `Total: Rs. ${totalPrice.toFixed(
+              2
+            )}`;
+
+            // Close the cart slider
+            toggleCartSlider();
+          });
+        });
     
     </script>
     <style>
