@@ -145,6 +145,106 @@
 .navbar .nav-menu-right .fa-bars{
     display: none;
 }
+.cart{
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(249, 251, 252, 0.482);
+    backdrop-filter: blur(2px);
+    border-radius: 2px;
+    box-shadow: 2px 2px rgb(202, 201, 201);
+    float: right;
+    top: 13%;
+    left: 76%;
+    display: none;
+}
+.cart.active{
+    display: flex;
+    flex-direction: column;
+}
+.cart-items{
+    width: 35rem;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.cart-item{
+    position: relative;
+    display: flex;
+    margin: 3rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-color: white;
+    border: 1px solid rgb(105, 104, 104);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+.total-price{
+    text-align: center;
+    color: rgb(48, 48, 48);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.delete-btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.509);
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1rem;
+    padding: 0.8rem;
+}
+.delete-btn:hover{
+    background-color: black;
+}
+.item-img{
+    width: 9rem;
+}
+.item-name,.item-price{
+    font-size: 1.5rem;
+}
+.item-name{
+    font-weight: bold;
+}
+.item-price{
+    color: rgb(84, 84, 84);
+}
+.item-quantity{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.item-quantity>h3{
+    font-size: 1.5rem;
+    color: grey;
+}
+.item-quantity>button{
+    background-color: black;
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.item-quantity>button:hover{
+    background-color: cadetblue;
+}
+.cart-btn{
+    z-index: 2;
+    padding: 2rem;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cart-btn:hover{
+    background-color: cadetblue;
+    font-weight: bold;
+}
 .slideshow-container{
     height: 60rem;
     position: relative;
